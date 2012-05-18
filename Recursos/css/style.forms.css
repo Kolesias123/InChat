@@ -1,0 +1,141 @@
+/**
+ * Estilo - Formularios.
+ * InfoSmart. Todos los derechos reservados.
+ *
+ * Copyright 2012 - Iván Bravo Bravo (Kolesias123)
+ * http://chat.infosmart.mx/
+**/
+
+/* Predeterminado */
+
+label.f {
+	color: #840035;
+	font-size: 15px;
+}
+
+.dual section {
+	float: left;
+	margin-right: 30px !important;
+}
+
+.tiny {
+	font-size: 12px;
+}
+
+form span {
+	color: gray;
+	font-size: 12px;
+	
+	text-shadow: 0 1px 1px white;
+	
+	line-height: 14px;
+	display: block;
+}
+
+/* Botones */
+
+.ibtn1 {
+	padding: 7px 25px;
+	text-align: center;
+	
+	font-size: 13px;
+	border: 1px solid #CE0052;
+	
+	color: white;
+	font-weight: normal;
+	
+	border-radius: 3px;	
+	box-shadow: 0 1px 0 rgba(245, 0, 98, .8) inset;
+	
+	margin: 5px;
+	margin-left: 0;
+	
+	transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+	
+	background: #a60042;
+	background: -moz-linear-gradient(top, #a60042 0%, #b50033 99%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a60042), color-stop(99%,#b50033));
+	background: -webkit-linear-gradient(top, #a60042 0%,#b50033 99%);
+	background: -o-linear-gradient(top, #a60042 0%,#b50033 99%);
+	background: -ms-linear-gradient(top, #a60042 0%,#b50033 99%);
+	background: linear-gradient(top, #a60042 0%,#b50033 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a60042', endColorstr='#b50033',GradientType=0 );
+}
+
+.ibtn1:hover {
+	text-decoration: none;
+	border: 1px solid #E7005C;
+}
+
+/* Cuadros - Paso */
+
+input[type='range'] {
+	width: 400px;
+}
+
+input[type='file'] {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='url'],
+input[type='text'],
+input[type='email'],
+input[type='file'] {
+	width: 400px;
+	height: 20px;
+	
+	border: 2px solid #D8D8D8;
+	
+	padding: 5px 3px;
+	border-rardius: 3px;
+}
+
+input[required] {
+	border-top-color: #840035;
+}
+
+input[type='text']:hover,
+input[type='url']:hover,
+input[type='email']:hover {
+	border-color: #840035;
+}
+
+input[type='text']:focus,
+input[type='url']:focus,
+input[type='email']:focus {
+	border-color: #A60042;
+}
+
+form textarea {
+	width: 390px;
+	height: 150px;
+	
+	border: 2px solid #D8D8D8;
+	
+	padding: 5px;
+	border-radius: 3px;
+}
+
+form textarea:hover {
+	border-color: #840035;
+}
+
+form textarea:focus {
+	border-color: #A60042;
+}
+
+/* Cuadros - Frame */
+
+.frame input[type='text'],
+.frame input[type='file'] {
+	width: 90%;
+	height: 20px;
+	
+	padding: 5px;
+}

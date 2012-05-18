@@ -1,0 +1,58 @@
+/**
+ * Estilo - Estilo de un Frame
+ * InfoSmart. Todos los derechos reservados.
+ *
+ * Copyright 2012 - Iván Bravo Bravo (Kolesias123)
+ * http://chat.infosmart.mx/
+**/
+
+/* Contenido */
+
+.content h1 {
+	font-size: 21px;
+	font-weight: normal;
+	
+	opacity: .9;
+	margin-top: 0;
+	
+	padding-bottom: 8px;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.content h2 {
+	font-size: 18px;
+	font-weight: normal;
+	
+	padding-bottom: 8px;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.content #myphoto {
+	max-height: 80px;
+}
+
+/* Contenido - Perfil */
+
+.profile .info figure {
+	float: left;
+	margin-right: 15px;
+}
+
+.profile .info figure img {
+	max-height: 80px;
+	max-width: 100px;
+}
+
+.profile .info aside {
+	float: left;
+	width: 60%;
+}
+
+.profile .info aside p:first-child {
+	margin-top: 0;
+}
+
+.profile label.f {
+	font-size: 14px;
+	margin-bottom: 4px;
+}

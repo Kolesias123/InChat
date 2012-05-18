@@ -1,0 +1,479 @@
+/**
+ * Estilo - Chat predeterminado.
+ * InfoSmart. Todos los derechos reservados.
+ *
+ * Copyright 2012 - Iván Bravo Bravo (Kolesias123)
+ * http://chat.infosmart.mx/
+**/
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Open+Sans:400italic,700italic,400,700|Droid+Sans:400italic,700italic,400,700);
+
+/* Predeterminado */
+
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+div::after,
+p::after,
+header::after,
+footer::after,
+nav::after,
+section::after,
+hgroup::after,
+article::after,
+details::after,
+figure::after,
+li::after,
+aside::after,
+.clearfix::after,
+.clear::after {	
+	clear: both;
+	content: " ";
+	display: block;
+	visibility: hidden;
+}
+
+body {
+	background: transparent;
+	overflow: hidden;
+}
+
+.page .left {
+	float: left !important;
+}
+
+.page .right {
+	float: right !important;
+}
+
+.page .center {
+	text-align: center;
+}
+
+.page .none {
+	display: none;
+}
+
+.ibtn {
+	padding: 7px 25px;
+	text-align: center;
+	
+	font-size: 13px;
+	border: 1px solid #D8D8D8;
+	
+	color: #424242;
+	font-weight: normal;
+	
+	border-radius: 3px;	
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset;
+	
+	margin: 5px;
+	margin-left: 0;
+	
+	cursor: pointer;
+	
+	transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+	
+	background: #f5f5f5; /* Old browsers */
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f5f5f5 0%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f5f5f5 0%,#eaeaea 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #f5f5f5 0%,#eaeaea 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #f5f5f5 0%,#eaeaea 100%); /* W3C */
+}
+
+.ibtn:hover {
+	border: 1px solid #BDBDBD;
+	text-decoration: none !important;
+}
+
+.ibtn:active {
+	background: #F2F2F2 !important;
+}
+
+/* Chat */
+
+.chat-area {
+	width: 100%;
+	height: 100%;
+	
+	min-width: 300px;
+	min-height: 300px;
+	
+	background: transparent;
+	padding: 5px;
+	
+	font-family: "Ubuntu", Droid Sans, Segoe UI, Lucida Grande, Tahoma, Verdana, Arial;	
+	
+	font-size: 13px;	
+	line-height: 18px;
+	
+	text-align: left;
+	direction: ltr;
+}
+
+.chat-area .c1 {
+	width: 70%;
+	float: left;
+	
+	margin-right: 10px;
+	min-width: 230px;
+}
+
+.chat-area .c1.big {
+	width: 90% !important;
+}
+
+.chat-area .c2 {
+	width: 20%;
+	float: left;
+	
+	min-width: 90px;
+	box-shadow: 2px 2px 5px gray;
+	
+	background: rgba(255, 255, 255, .6);
+	padding: 5px;
+	
+	border: 1px solid #424242;
+	border-radius: 3px;
+	
+	transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.chat-area .c2.hide {
+	position: absolute;
+	right: -19%;
+}
+
+/* Chat - Mensajes */
+
+.chat-area .messages {
+	background: rgba(255, 255, 255, .6);
+	color: black;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+	
+	border-radius: 0 0 2px 2px;
+	padding: 10px;	
+	
+	border: 1px solid #424242;	
+	border-top-color: #585858;
+	
+	box-shadow: 2px 2px 5px gray;
+	
+	transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.chat-area .messages p {
+	margin: 0;
+}
+
+.chat-area .messages .user-msg {
+	padding: 3px 5px;
+	
+	padding-bottom: 8px;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.chat-area .messages .user-msg figure {
+	float: left;
+	margin-right: 5px;
+}
+
+.chat-area .messages .user-msg figure img {
+	max-width: 40px;
+}
+
+.chat-area .messages .user-msg aside {
+	float: left;
+	width: 80%;
+}
+
+.chat-area .messages .user-msg:last-child {
+	border-bottom: 0;
+}
+
+.chat-area .messages .user-msg .name {
+	margin-bottom: 3px;
+	
+	cursor: pointer;
+	float: left;
+	
+	text-shadow: 0 1px 1px white;
+	color: #424242;
+}
+
+.chat-area .messages .user-msg time {
+	float: right;
+	font-size: 12px;
+	
+	color: gray;
+	display: none;
+}
+
+.chat-area .messages .user-msg:hover time {
+	display: block;
+}
+
+.chat-area .messages .user-msg label {
+	font-weight: bold;
+	word-wrap: break-word;
+}
+
+/* Chat - Cuadro */
+
+.chat-area  textarea {
+	display: block;
+	font-family: "Open Sans", lucida grande,tahoma,verdana, Arial;
+	
+	height: 30px;
+	border: 1px solid #424242;	
+	
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+	margin-bottom: -1px;
+	
+	border-radius: 5px 5px 0 0;
+	background: rgba(255, 255, 255, .6);
+	
+	padding: 5px 4px;
+	font-size: 12px;
+	
+	outline: 0;
+	resize: none;
+	
+	transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.chat-area  textarea::-webkit-input-placeholder,
+.chat-area textarea::-moz-placeholder {
+	color: #464646 !important;
+}
+
+.chat-area  textarea:hover {
+	background: rgba(255, 255, 255, .7);
+}
+
+.chat-area  textarea:disabled {
+	background: rgba(189, 189, 189, .5);
+}
+
+
+/* Chat - Foto de perfil */
+
+.chat-area .c2 figure {
+	text-align: center;
+	padding-bottom: 5px;
+	
+	border-bottom: 1px solid black;
+}
+
+.chat-area .c2 figure img {
+	position: relative;
+	cursor: pointer;
+	
+	max-width: 90%;
+	max-height: 50%;
+}
+
+/* Chat - Lista de usuarios */
+
+.chat-area .c2 .users-list label {
+	display: block;
+	padding: 3px 0;
+	
+	cursor: pointer;
+	color: black;
+	
+	word-wrap: break-word;
+	
+	transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.chat-area .c2 .users-list label.blink {
+	text-shadow: 0 1px 1px red;
+	color: red;
+}
+
+.chat-area .c2 .users-list label.my {
+	font-weight: bold;
+	text-shadow: 0 1px 1px white;
+}
+
+/* Chat - Opciones */
+
+.chat-area .options {
+	margin-top: 5px;
+}
+
+.chat-area .options img {
+	max-height: 30px;
+}
+
+/* Chat - Opciones - Radio */
+
+.chat-area .options .radio {
+	padding: 5px;
+	border-radius: 5px;
+	
+	float: left;
+	border: 1px solid #848484;
+	
+	width: 200px;
+	box-shadow: 2px 2px 3px gray;
+	
+	color: white;
+	
+	background: #45484d; /* Old browsers */
+	background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
+	background: linear-gradient(top, #45484d 0%,#000000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.chat-area .options .radio img {
+	height: 20px;
+	margin-right: 5px;
+}
+
+.chat-area .options .radio #radio-volume {
+	-webkit-appearance: none !important;
+	float: left;
+	
+	background: #1C1C1C;
+	box-shadow: 1px 1px 2px rgba(132,132,132,0.8) inset;
+	
+	border-radius: 5px;
+	height: 10px;
+	
+	margin-right: 5px;
+	margin-top: 1px;
+	
+	background: #45484d; /* Old browsers */
+	background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
+	background: linear-gradient(top, #45484d 0%,#000000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+/* Chat - Opciones - Botón */
+
+.chat-area .button {
+	border-top: 1px solid #848484;
+	
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	overflow: visible;
+	
+	width: 11px;
+	height: 20px;
+}
+
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+	background: rgba(0, 0, 0, .4);
+	background-clip: padding-box;
+
+	display: block;
+	border-radius: 5px;
+	
+	min-height: 30px;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+	background: rgba(0, 0, 0, .8);
+}
+
+::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+}
+
+::-webkit-scrollbar-track {
+	background-clip: padding-box;
+	border: solid transparent;
+	
+	border-width: 0 0 0 4px;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-clip: padding-box;	
+	background-color: rgba(0, 0, 0, .2);
+}
+
+::-webkit-scrollbar-track-piece:vertical:start {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+::-webkit-scrollbar-track-piece:vertical:end {
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+}
+
+::-webkit-scrollbar-track-piece:horizontal:start {
+	border-top-left-radius:5px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:5px;
+}
+
+::-webkit-scrollbar-track-piece:horizontal:end {
+	border-top-left-radius:0;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:0;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+	background-clip: padding-box;
+	background-color: #F5F5F5;
+	
+	border: solid white;
+	border-width: 3px 0 0 3px;
+}

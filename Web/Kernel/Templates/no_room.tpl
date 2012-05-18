@@ -1,0 +1,1 @@
+<p class="center box-error block">	¡Uy! Lo sentimos, pero la sala que desea cargar (<?php echo $G['id']; ?>) no existe.</p><p class="center" style="margin-top: 30px;">	<a href="%PATH%/" class="ibtn1" target="_blank">¡Crea tu propia sala de chat ahora mismo!</a></p>

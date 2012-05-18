@@ -1,0 +1,1 @@
+<div class="content">	<p>Lo sentimos, pero por ahora no hay características disponibles. ¡Vuelve en la próxima versión!</p></div>

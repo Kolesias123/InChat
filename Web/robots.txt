@@ -1,0 +1,53 @@
+# Lista de Robots recomendados para BeatRock.
+# Dependiendo de tu sitio web. puede ir agregando o eliminando nuevas
+# opciones de robots y/o bloqueos.
+
+User-agent: baiduspider
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: Googlebot
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: msnbot
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: naverbot
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: seznambot
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: Slurp
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: teoma
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: Yandex
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: NikirinBOT
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/
+
+User-agent: Mediapartners-Google
+Disallow: /Kernel/
+Disallow: /Setup/
+Disallow: /imgod/

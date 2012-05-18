@@ -1,0 +1,7 @@
+¡Saludos!
+
+Aquí esta el archivo JavaScript del servidor de InChat, ahora leete unas documentaciones de NodeJS e instala SOCKET.IO , una vez que aprendas como funciona NODEJS sabrás como iniciarlo.
+
+Dentro de node_modules te dejamos el módulo para NodeJS necesario para iniciar el servidor.
+
+Suerte ;)

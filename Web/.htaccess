@@ -1,0 +1,59 @@
+<Files .htaccess>
+deny from all
+</Files>
+
+# Paginas/Mensajes de error.
+ErrorDocument 404 /Kernel/FakeProxy.php?toUrl=aHR0cDovL3Jlc291cmNlcy5pbmZvc21hcnQubXgvZXJyb3JzL25vdF9mb3VuZC5odG1s
+ErrorDocument 403 /Kernel/FakeProxy.php?toUrl=aHR0cDovL3Jlc291cmNlcy5pbmZvc21hcnQubXgvZXJyb3JzL3VuYXV0aG9yaXplZC5odG1s
+ErrorDocument 500 /Kernel/FakeProxy.php?toUrl=aHR0cDovL3Jlc291cmNlcy5pbmZvc21hcnQubXgvZXJyb3JzL2ludGVybmFsX3NlcnZlcl9lcnJvci5odG1ss
+
+# No indexar directorios.
+Options +FollowSymlinks
+Options -Indexes
+
+# Parametros de permisos.
+Order allow,deny
+Allow from all
+
+# Configuración PHP recomendada.
+<ifModule mod_php5.c>
+	php_value register_globals Off
+	php_value session.use_trans_sid 0
+	php_value default_charset iso-8859-15
+	
+	php_value max_execution_time "120"
+	php_value memory_limit "30M"
+	php_value max_input_time "100"
+	
+	php_value upload_max_filesize "50M"
+	php_flag zlib.output_compression Off
+	php_flag display_errors On
+	
+	php_value post_max_size "50M"
+	php_flag safe_mode Off
+	php_flag magic_quotes_gpc Off
+</ifModule>
+
+# Configuración para el modulo Rewrite.
+<ifModule mod_rewrite.c>
+	RewriteEngine on
+
+	## Parametros de seguridad.
+	RewriteRule ^/Kernel/Site/([A-Za-z0-9]+) ./index.php
+	RewriteRule ^/Kernel/Templates/([A-Za-z0-9]+) ./index.php
+
+	RewriteRule ^sitemap.xml ./sitemap.php
+	
+	# ESCRIBA AQUÍ SUS REGLAS.
+	RewriteRule ^photo/([A-Za-z0-9]+)/([a-z]+) ./photo_profile.php?id=$1&size=$2
+	RewriteRule ^photo/([A-Za-z0-9]+) ./photo_profile.php?id=$1
+	
+	RewriteRule ^room/([0-9]+) ./room.php?id=$1
+	
+	# Descomenta la siguiente línea para usar el "Acceso corto a páginas".
+	#RewriteRule ^(([A-Za-z0-9\-_]+/)*[A-Za-z0-9\-_]+)?$ ./Kernel/Pages.php	
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(([A-Za-z0-9\-_]+/)*[A-Za-z0-9\-_]+)?$ $1.php
+</ifModule>
